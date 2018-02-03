@@ -13,6 +13,8 @@ class InfoOutputViewController: UIViewController {
     // outputs for the flag and name
     @IBOutlet weak var outputName: UILabel!
     @IBOutlet weak var outputImage: UIImageView!
+    
+    // index to ge the correct place in the countries array
     var index: Int!
     
     override func viewDidLoad() {

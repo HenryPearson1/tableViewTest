@@ -8,4 +8,5 @@
 
 import Foundation
 
+// array of countries and their names
 var countries = [["USA","USFlag"],["France","FrenchFlag"],["Germany","GermanyFlag"],["India","IndiaFlag"],["Italy","ItalyFlag"],["Mexico","MexiceFlag"],["Russia","RussiaFlag"],["Spain","SpainFlag"],["Turkey","TurkeyFlag"],["UK","UKFlag"]]
