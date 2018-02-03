@@ -34,17 +34,19 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    // return the number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
+    // set the number of rows to the number of countries
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return countries.count
     }
 
-    
+    // create the cell and add correct data to the cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TableViewCell
         cell.imageOutlet.image = UIImage(named: countries[indexPath.row][1])
@@ -55,11 +57,13 @@ class TableViewController: UITableViewController {
     }
     
 
+    // send of the selected index of the row
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         performSegue(withIdentifier: "mySegue", sender: nil)
     }
     
+    // set the destination right before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? InfoOutputViewController {
             destination.index = selectedIndex
